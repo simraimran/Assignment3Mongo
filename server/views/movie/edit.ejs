@@ -1,0 +1,89 @@
+<%- include ../partials/header.ejs%> <!-- linking to header and navbar-->
+<%- include ../partials/navbar.ejs%>
+
+
+<!--content for edit--->
+<div class= "container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <h1><%=title%></h1>
+        <form class= "form" method="post">
+
+            <div class= "form-group">
+            <label for="nameTextField">Movie Title </label> <!---So user enters movie title-->
+            <input type= "text" class="form-control"
+            id="nameTextField"
+            placeholder="Enter Movie Name"
+            name="name"
+            value= "<%= movie.name%>"
+             required>
+            </div>
+
+
+             <div class= "form-group">
+            <label for="yearTextField">Year </label> <!---So user enters year-->
+            <input type= "text" class="form-control"
+            id="yearTextField"
+            placeholder="Enter Movie Year"
+            name="year"
+            value= "<%= movie.year%>"
+             required>
+            </div>
+
+
+            <div class= "form-group">
+            <label for="genreTextField">Genre </label> <!---So user enters movie genre-->
+            <input type= "text" class="form-control"
+            id="genreTextField"
+            placeholder="Enter Genre"
+            name="genre"
+            value= "<%= movie.genre%>"
+             required>
+            </div>
+
+
+            <div class= "form-group">
+            <label for="ratingTextField">Rating: </label> <!---So user enters rating-->
+            <input type= "text" class="form-control"
+            id="ratingTextField"
+            placeholder="Rating:"
+            name="rating" 
+            value= "<%= movie.rating%>"
+            required>
+            </div>
+
+             <div class= "form-group">
+            <label for="ageratingTextField">Age Rating </label> <!---So user enters age rating-->
+            <input type= "text" class="form-control" 
+            id="ageratingTextField"
+            placeholder="Enter Age Rating"
+            name="age rating" 
+            value= "<%= movie.age%>"
+            required>
+            </div>
+
+             <div class= "form-group">
+            <label for="priceTextField">Price </label> <!---So user enters movie torice-->
+            <input type= "text" class="form-control"
+            id="PriceTextField"
+            placeholder="Enter Price"
+            name="price" 
+            value= "<%= movie.price%>"
+            required>
+            </div>
+
+            <button class="btn-btn-primary" type="submit"> <!---So user submtis-->
+                <i class ="fas fa-edit"></i> Submit
+            </button>
+
+            <a href="/book-list" class= "btn btn-warning"> <!---So user can cancel-->
+            <i class= "fa fas-undo"></i> Cancel </a>
+            </form>
+    </div>
+    </div>
+</div>
+
+
+
+
+<%- include ../partials/footer.ejs%>

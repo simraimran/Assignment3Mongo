@@ -1,0 +1,60 @@
+<%- include ../partials/header.ejs%>
+<%- include  ../partials/navbar.ejs%>
+
+<!---Creating container for table --->
+<main class="container">
+  <div class= "row">
+     <div class= "col-md-offset-10 col-md-10">
+         <h1><%=title%></h1>
+        <a href="/movie-list/add" class="btn btn-primary" role="button">
+        <i class= "fas fa-plus-square"></i> Add YOUR MoviePick 
+        </a>
+        <br>
+         <br>
+
+  <table class= "table table-bordered table-striped table-hover colour:black">
+  <tr>
+
+  <!---database text--->
+  <b>
+     <th class="text-center"> Name </th>
+    <th class="text-center"> Year</th>
+    <th class="text-center"> Genre</th>
+     <th class="text-center"> Rating</th>
+     <th class="text-center"> Age Rating</th>
+     <th class="text-center"> Rental Price</th>
+     <th class="text-center"> </th>
+     <th class="text-center"> </th>
+     </b>
+  </tr>
+
+  <!---When user adds mor emovies count will go up--->
+  <% for(let count=0; count < Movielist.length; count++) {%>
+        <tr>
+             <td class= "text-center"><%= Movielist[count].name %></td>
+            <td class= "text-center"><%= Movielist[count].year %></td>
+             <td class= "text-center"><%= Movielist[count].genre %></td>
+             <td class= "text-center"><%= Movielist[count].rating %></td>
+              <td class= "text-center"><%= Movielist[count].age %></td>
+               <td class= "text-center"><%= Movielist[count].price %></td>
+               <td class= "text-center">
+               <a href="/movie-list/edit/<%= Movielist[count]._id %>" 
+               class="btn btn-primary">
+               <i class="fas fa-pencil-alt" ></i> Edit </a>
+               </td>
+
+               <td class= "text-center">
+               <a href="/movie-list/delete/<%= Movielist[count]._id %>" 
+               class="btn btn-danger">
+               <i class="fas fa-trash-alt" ></i> Delete </a>
+               </td>
+        </tr>
+  <%} %>
+
+</div>
+</div>
+
+
+</main>
+<%- include ../partials/footer.ejs%>
+

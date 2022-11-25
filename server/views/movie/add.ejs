@@ -1,0 +1,73 @@
+<%- include ../partials/header.ejs%>
+<%- include ../partials/navbar.ejs%>
+
+<!--content for add--->
+<div class= "container">
+    <div class="row">
+    <div class="col-md-offset-3 col-md-6"> <!---creating coloumns and row for database --->
+        <h1><%=title%></h1>
+        <form class= "form" method="post">  <!---Method post becasue it will update the movie database --->
+
+            <div class= "form-group">
+            <label for="nameTextField">Movie Title </label>
+            <input type= "text" class="form-control"
+            id="nameTextField"
+            placeholder="Enter Movie Name"
+            name="name" required>
+            </div>
+
+
+             <div class= "form-group">
+            <label for="yearTextField">Year </label>
+            <input type= "text" class="form-control"
+            id="yearTextField"
+            placeholder="Enter Movie Year"
+            name="year" required>
+            </div>
+
+
+            <div class= "form-group">
+            <label for="genreTextField">Genre </label>
+            <input type= "text" class="form-control"
+            id="genreTextField"
+            placeholder="Enter Genre"
+            name="genre" required>
+            </div>
+
+
+            <div class= "form-group">
+            <label for="ratingTextField">Rating: </label>
+            <input type= "text" class="form-control"
+            id="ratingTextField"
+            placeholder="Rating:"
+            name="rating" required>
+            </div>
+
+             <div class= "form-group">
+            <label for="ageratingTextField">Age Rating </label>
+            <input type= "text" class="form-control"
+            id="ageratingTextField"
+            placeholder="Enter Age Rating"
+            name="age" required>
+            </div>
+
+             <div class= "form-group">
+            <label for="priceTextField">Price </label>
+            <input type= "text" class="form-control"
+            id="PriceTextField"
+            placeholder="Enter Price"
+            name="price" required>
+            </div>
+<br>
+            <button class="btn-btn-red" type="submit"> <!---Submit button after editing --->
+                <i class ="fas fa-edit"></i> Submit
+            </button>
+
+              <button class="btn-btn-warning" type="cancel"> <!---Cancel button after editing --->
+                <i class ="fas fa-undo"></i> Cancel
+            </button>
+    </div>
+    </div>
+</div>
+  <!---Slinking to footer--->
+<%- include ../partials/footer.ejs%>
